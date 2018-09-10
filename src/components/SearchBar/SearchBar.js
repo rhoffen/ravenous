@@ -1,5 +1,6 @@
 import React from 'react';
 import './SearchBar.css';
+import Yelp from '../../util/Yelp.js'
 
 
 
@@ -45,6 +46,7 @@ class SearchBar extends React.Component {
 
   handleSearch(event) {
     this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy);
+    //Yelp(this.state.term, this.state.location, this.state.sortBy);
     event.preventDefault();
   }
 
