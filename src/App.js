@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import BusinessList from './components/BusinessList/BusinessList.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
+import Yelp from './util/Yelp.js';
 
 const business = {
   imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
@@ -27,7 +28,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>ravenous</h1>
-        {<SearchBar searchYelp = {this.searchYelp} />}
+        {/*<SearchBar searchYelp = {this.searchYelp} />*/}
+        {<SearchBar searchYelp = {Yelp.search} />}
         {<BusinessList businesses={businesses} />}
       </div>
     );
